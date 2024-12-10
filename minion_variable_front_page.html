@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP Credit Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Minion+Variable+Concept:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: rgb(48, 59, 151);
+            background-color: white;
+        }
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header img {
+            height: 75px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(48, 59, 151);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .language-switcher {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .hero {
+            position: relative;
+            background: url('https://joep1504.github.io/jsp_credit_management_website/shanghai_cityscape.png') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Tinted banner */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+        .hero-content h1 {
+            font-family: 'Minion Variable Concept', serif;
+            font-size: 4rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em; /* Optical kerning */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .hero-content p {
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            line-height: 1.5;
+        }
+        .content-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        .content-section h2 {
+            font-family: 'Minion Variable Concept', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.02em; /* Optical kerning */
+            color: rgb(48, 59, 151);
+        }
+        .content-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: rgb(48, 59, 151);
+        }
+        footer {
+            background: rgb(48, 59, 151);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://joep1504.github.io/jsp_credit_management_website/logo.png" alt="JSP Credit Management Logo">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="language-switcher">
+        <a href="?lang=en" style="color: rgb(48, 59, 151);">Eng</a> | 
+        <a href="?lang=zh" style="color: rgb(48, 59, 151);">中文</a>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Supporting Chinese Businesses</h1>
+        <p>Supporting Chinese businesses that are currently exporting to the UK,<br>
+        or planning to do so in the future with all their credit risk management needs.</p>
+    </div>
+</div>
+
+<div class="content-section">
+    <h2>Our Expertise</h2>
+    <p>We offer industry-leading debt recovery, credit control, and consultancy services tailored to support your business growth and success.</p>
+</div>
+
+<footer>
+    <p>Contact us at: <a href="mailto:collections@jspcreditmanagement.co.uk">collections@jspcreditmanagement.co.uk</a></p>
+    <p>&copy; 2024 JSP Credit Management Ltd. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
