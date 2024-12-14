@@ -1,0 +1,66 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: rgb(48, 59, 151);
+}
+
+/* Container for content */
+.container {
+    background: white;
+    padding: 3rem 5rem;  /* Increased padding for larger content */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;  /* Limiting container width */
+    width: 100%;
+}
+
+/* Header and subheader styles */
+h1 {
+    font-size: 4rem;  /* Increased font size for header */
+    margin-bottom: 1.5rem;  /* Increased spacing for clarity */
+}
+
+p {
+    font-size: 1.5rem;  /* Increased font size for paragraph */
+    margin-bottom: 2rem;
+}
+
+/* Logo styles */
+.logo {
+    width: 250px;  /* Adjusted logo size for larger visibility */
+    margin-bottom: 2rem;
+}
+
+/* Ensure the page is responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        width: 200px;
+    }
+}
