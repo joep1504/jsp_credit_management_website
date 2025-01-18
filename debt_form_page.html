@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Collection Instruction Form 债务催收指示表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin: 0.5rem 0 0.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            border-color: #3498db;
+            box-shadow: 0px 0px 5px rgba(52, 152, 219, 0.5);
+            outline: none;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #34495e;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html">
+            <img src="assets/images/logo.png" alt="JSP Credit Management Logo">
+
+        </a>
+        <a href="index.html">Back to Homepage | 返回首页</a>
+    </header>
+
+    <!-- Main Content -->
+    <h1>Debt Collection Instruction Form | 债务催收指示表</h1>
+    <div class="container">
+        <form action="#" method="post" novalidate>
+            <!-- Creditor Information -->
+            <div class="form-section">
+                <h2>Creditor Information | 债权人信息</h2>
+                <label for="agent_name">Agent Name | 代理人姓名:</label>
+                <input type="text" id="agent_name" name="agent_name" required>
+
+                <label for="creditor_company_name">Creditor Company Name | 债权人公司名称:</label>
+                <input type="text" id="creditor_company_name" name="creditor_company_name" required>
+
+                <label for="creditor_title">Creditor Title | 债权人职务:</label>
+                <input type="text" id="creditor_title" name="creditor_title" required>
+
+                <label for="creditor_first_name">Creditor First Name | 债权人名字:</label>
+                <input type="text" id="creditor_first_name" name="creditor_first_name" required>
+
+                <label for="creditor_surname">Creditor Surname | 信用或姓氏:</label>
+                <input type="text" id="creditor_surname" name="creditor_surname" required>
+
+                <label for="creditor_address1">Creditor Address Line 1 | 债权人地址第 1 行:</label>
+                <input type="text" id="creditor_address1" name="creditor_address1" required>
+
+                <label for="creditor_address2">Creditor Address Line 2 | 债权人地址第 2 行:</label>
+                <input type="text" id="creditor_address2" name="creditor_address2">
+
+                <label for="creditor_city">Creditor City | 债权人之城:</label>
+                <input type="text" id="creditor_city" name="creditor_city" required>
+
+                <label for="creditor_region">Creditor Region | 债权国地区:</label>
+                <input type="text" id="creditor_region" name="creditor_region">
+
+                <label for="creditor_country">Creditor Country | 国家:</label>
+                <input type="text" id="creditor_country" name="creditor_country" required>
+
+                <label for="creditor_postcode">Creditor Postcode | 邮政编码:</label>
+                <input type="text" id="creditor_postcode" name="creditor_postcode" pattern="[A-Za-z0-9 ]{3,10}" title="Please enter a valid postcode" required>
+
+                <label for="creditor_telephone">Creditor Telephone Number | 债权人电话号码:</label>
+                <input type="tel" id="creditor_telephone" name="creditor_telephone" pattern="[0-9]+" title="Only numbers are allowed" required>
+
+                <label for="creditor_email">Creditor Email Address | 债权人电子邮件:</label>
+                <input type="email" id="creditor_email" name="creditor_email" required>
+
+                <label for="debt_amount_gbp">Debt Amount (GBP) | 债务金额（英镑):</label>
+                <input type="number" id="debt_amount_gbp" name="debt_amount_gbp" required>
+
+                <label for="debt_amount_local">Debt Amount (Local Currency) | 债务金额（当地货币):</label>
+                <input type="number" id="debt_amount_local" name="debt_amount_local">
+
+                <label for="date_debt_outstanding">Date Debt Outstanding From | 未偿还债务日期:</label>
+                <input type="date" id="date_debt_outstanding" name="date_debt_outstanding" required>
+            </div>
+
+            <!-- Debtor Information -->
+            <div class="form-section">
+                <h2>Debtor Information | 债务人信息</h2>
+                <label for="debtor_company_name">Debtor Company Name | 债务人公司名称:</label>
+                <input type="text" id="debtor_company_name" name="debtor_company_name">
+
+                <label for="debtor_first_name">Debtor First Name | 债务人名字:</label>
+                <input type="text" id="debtor_first_name" name="debtor_first_name" required>
+
+                <label for="debtor_surname">Debtor Surname | 债务人姓氏:</label>
+                <input type="text" id="debtor_surname" name="debtor_surname" required>
+
+                <label for="debtor_address1">Debtor Address Line 1 | 债务人地址第 1 行:</label>
+                <input type="text" id="debtor_address1" name="debtor_address1" required>
+
+                <label for="debtor_address2">Debtor Address Line 2 | 债务人地址第 2 行:</label>
+                <input type="text" id="debtor_address2" name="debtor_address2">
+
+                <label for="debtor_city">Debtor City | 债务人之城:</label>
+                <input type="text" id="debtor_city" name="debtor_city" required>
+
+                <label for="debtor_county">Debtor County | 债务人所在县:</label>
+                <input type="text" id="debtor_county" name="debtor_county">
+
+                <label for="debtor_country">Debtor Country | 债务人所在国家:</label>
+                <input type="text" id="debtor_country" name="debtor_country" required>
+
+                <label for="debtor_postcode">Debtor Postcode | 债务人的邮政编码:</label>
+                <input type="text" id="debtor_postcode" name="debtor_postcode" pattern="[A-Za-z0-9 ]{3,10}" title="Please enter a valid postcode" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit | 提交</button>
+        </form>
+    </div>
+</body>
+</html>
