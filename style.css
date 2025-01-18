@@ -1,66 +1,379 @@
-/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
-/* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: rgb(48, 59, 151);
+    background-color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1rem 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 75px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(48, 59, 151);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: rgb(48, 59, 151);
+    padding: 8px 12px;
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
     height: 100vh;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    max-width: 60%;
+    z-index: 1;
+}
+
+.content h1 {
+    font-family: 'Minion Variable Concept', serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+}
+
+.content p {
+    font-family: 'DIN Alternate', sans-serif;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: rgb(47, 56, 150);
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Decorative Header Styling */
+.decorative-header {
+    font-family: 'Minion Variable Concept', serif;
+    font-size: 2.5rem;
+    color: rgb(48, 59, 151);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.decorative-header::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: rgb(47, 56, 150); /* Decorative underline color */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
     text-align: center;
     color: rgb(48, 59, 151);
+    margin: 0 auto 2rem auto;
+    max-width: 800px; /* Keeps paragraphs neatly aligned */
 }
 
-/* Container for content */
-.container {
-    background: white;
-    padding: 3rem 5rem;  /* Increased padding for larger content */
+.section ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.section ul li {
+    font-size: 1rem;
+    color: rgb(48, 59, 151);
+    margin: 0.5rem 0;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.section ul li::before {
+    content: "•";
+    color: rgb(47, 56, 150); /* Bullet point color */
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* Services Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between items */
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    max-width: 800px;  /* Limiting container width */
-    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Header and subheader styles */
-h1 {
-    font-size: 4rem;  /* Increased font size for header */
-    margin-bottom: 1.5rem;  /* Increased spacing for clarity */
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-p {
-    font-size: 1.5rem;  /* Increased font size for paragraph */
-    margin-bottom: 2rem;
+.service-item i {
+    font-size: 2rem; /* Icon size */
+    color: #3040a5; /* Icon color */
+    margin-bottom: 1rem;
 }
 
-/* Logo styles */
-.logo {
-    width: 400px;  /* Increased logo size even further */
-    margin-bottom: 2rem;
+.service-item p {
+    font-family: 'DIN Alternate', sans-serif;
+    font-size: 1.1rem;
+    color: #303b97;
+    font-weight: 600;
+    margin: 0;
 }
 
-/* Ensure the page is responsive */
-@media (max-width: 768px) {
-    .container {
-        padding: 2rem 2rem;
+/* Enhanced Header Style */
+.enhanced-header {
+    font-family: 'Minion Variable Concept', serif;
+    font-size: 2.5rem;
+    color: rgb(48, 59, 151);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.enhanced-header::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: rgb(47, 56, 150);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Section Styling */
+#our-work-ethics {
+    padding: 2rem 1.5rem;
+    background-color: #f8f8f8; /* Light grey background */
+    text-align: center;
+}
+
+#our-work-ethics p {
+    font-family: 'DIN Alternate', sans-serif;
+    font-size: 1.25rem;
+    color: rgb(48, 59, 151);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+/* Services Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 1.5rem; /* Space between items */
+    margin: 3rem 0; /* Spacing above and below */
+    text-align: center;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item i {
+    font-size: 2.5rem; /* Icon size */
+    color: #3040a5; /* Icon colour */
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    font-family: 'DIN Alternate', sans-serif;
+    font-size: 1.1rem;
+    color: #303b97;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+        gap: 1rem;
     }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    p {
-        font-size: 1.2rem;
-    }
-
-    .logo {
-        width: 200px;
-    }
 }
+
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.section h2 {
+    font-family: 'Minion Variable Concept', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+}
+/* General Section Styling */
+.section {
+    position: relative;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    color: rgb(48, 59, 151);
+    overflow: hidden; /* Ensure shapes don't spill out */
+}
+
+.section h2 {
+    font-family: 'Minion Variable Concept', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2; /* Ensure text sits on top */
+}
+
+.section p {
+    font-family: 'DIN Alternate', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 2; /* Ensure text sits on top */
+}
+
+/* Subtle Bar Graph */
+.background-graph {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 300px;
+    height: 200px;
+    background: url('bar-graph-shape.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.1; /* Semi-transparent */
+    z-index: 1;
+}
+
+/* Upward Arrow */
+.background-arrow {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: url('upward-arrow-shape.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.1; /* Semi-transparent */
+    z-index: 1;
+}
+#lang-en.active, #lang-cn.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
