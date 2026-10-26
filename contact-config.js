@@ -1,4 +1,4 @@
 window.CONTACT_CONFIG = Object.freeze({
     endpoint: "https://jsp-contact.joe-postings.workers.dev/contact",
-    turnstileSiteKey: "YOUR_TURNSTILE_SITE_KEY"
+    turnstileSiteKey: "0x4AAAAAAFmVdLL1Dq7f8P1C"
 });
