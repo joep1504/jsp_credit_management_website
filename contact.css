@@ -1,0 +1,55 @@
+#contact {
+    scroll-margin-top: 110px;
+}
+
+.contact-details p,
+.contact-form {
+    text-align: left;
+}
+
+.contact-form h3 {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    min-width: 0;
+}
+
+.contact-form fieldset {
+    border: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.contact-form :focus-visible {
+    outline: 3px solid #303b97;
+    outline-offset: 3px;
+}
+
+.contact-form #contact-message {
+    resize: vertical;
+}
+
+.contact-trap {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#contact-status {
+    min-height: 3em;
+    overflow-wrap: anywhere;
+}

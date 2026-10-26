@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSP Credit Management</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact-config.js" defer></script>
+    <script src="contact.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Minion+Variable+Concept:wght@500&family=DIN+Alternate:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-VZ98bOr1cctSYAxp1ryOebcz+Sb1Zg8vMWrHtTY3MwCoRd0Em08Ftx7Hv6cURwbF8Dk0bqhJe0/6J7HHM9rUeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -153,19 +156,8 @@
     </p>
 </div>
 
+</div>
 <footer>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-container">
-            <!-- Your contact details and form here -->
-        </div>
-    </section>    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts - DIN Alternate -->
@@ -289,41 +281,41 @@
             }
         }
     </style>
-</head>
-<body>
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
         <!-- Left Side: Contact Details -->
         <div class="contact-details">
             <div class="contact-header">
-                <h2>Need Help? Get in Touch</h2>
+                <h2 id="contact-heading">Need Help? Get in Touch</h2>
             </div>
-            <div class="info-item">
-                <i class="fas fa-phone"></i>
-                <div>
-                    <h4>Call Us</h4>
-                    <p>+44 (0) 333 577 0388</p>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <h4>Email Us</h4>
-                    <a href="mailto:collections@jspcreditmanagement.co.uk">collections@jspcreditmanagement.co.uk</a>
-                </div>
-            </div>
+            <p>Use this form to contact our team. We will reply using the email address you provide.</p>
+            <p>Please do not include bank details, payment card numbers or sensitive documents. Your details will be used to respond to your enquiry. Cloudflare Turnstile helps protect this form against spam.</p>
         </div>
         <!-- Right Side: Contact Form -->
         <div class="contact-form">
-            <div style="text-align: center; padding: 40px 20px;">
-                <h3 style="margin-bottom: 20px;">Send Us a Message</h3>
-                <p style="margin-bottom: 30px; color: #666;">Click the button below to send us an email with your inquiry.</p>
-                <a href="mailto:collections@jspcreditmanagement.co.uk" aria-label="Send email to collections@jspcreditmanagement.co.uk" style="display: inline-block; padding: 12px 30px; background-color: #303b97; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Click here to send an email</a>
-            </div>
+            <h3>Send Us a Message</h3>
+            <form id="contact-form" data-language="en">
+                <fieldset disabled>
+                    <label for="contact-name">Your name</label>
+                    <input id="contact-name" name="name" autocomplete="name" maxlength="100" required>
+                    <label for="contact-email">Your email address</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                    <label for="contact-subject">Subject</label>
+                    <input id="contact-subject" name="subject" maxlength="150" required>
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" minlength="10" maxlength="5000" required></textarea>
+                    <div class="contact-trap" aria-hidden="true" inert>
+                        <label for="contact-website">Leave this field empty</label>
+                        <input id="contact-website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div id="contact-challenge"></div>
+                    <button type="submit" disabled>Send message</button>
+                </fieldset>
+                <p id="contact-status" role="status" aria-live="polite">The contact form is currently unavailable. Please try again later.</p>
+                <noscript><p>Please enable JavaScript to use the protected contact form.</p></noscript>
+            </form>
         </div>
     </section>
-</body>
-</html>
 </footer>
 
 </body>

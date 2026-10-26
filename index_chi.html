@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="chi">
+<html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSP信用管理</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact-config.js" defer></script>
+    <script src="contact.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Minion+Variable+Concept:wght@500&family=DIN+Alternate:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-VZ98bOr1cctSYAxp1ryOebcz+Sb1Zg8vMWrHtTY3MwCoRd0Em08Ftx7Hv6cURwbF8Dk0bqhJe0/6J7HHM9rUeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -147,19 +150,8 @@
     </p>
 </div>
 
+</div>
 <footer>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <section id="contact">
-        <h2>联系我们</h2>
-        <div class="contact-container">
-            <!-- Your contact details and form here -->
-        </div>
-    </section>    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们</title>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts - DIN Alternate -->
@@ -283,41 +275,41 @@
             }
         }
     </style>
-</head>
-<body>
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
         <!-- Left Side: Contact Details -->
         <div class="contact-details">
             <div class="contact-header">
-                <h2>需要帮助吗？联系我们.</h2>
+                <h2 id="contact-heading">需要帮助吗？联系我们</h2>
             </div>
-            <div class="info-item">
-                <i class="fas fa-phone"></i>
-                <div>
-                    <h4>联系我们</h4>
-                    <p>+44 (0) 333 577 0388</p>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <h4>电子邮件</h4>
-                    <a href="mailto:collections@jspcreditmanagement.co.uk">collections@jspcreditmanagement.co.uk</a>
-                </div>
-            </div>
+            <p>请填写表格联系我们。我们会通过您提供的电子邮件地址回复。</p>
+            <p>请勿提供银行资料、银行卡号码或敏感文件。您的资料将用于回复您的咨询。此表格使用 Cloudflare Turnstile 防止垃圾信息。</p>
         </div>
         <!-- Right Side: Contact Form -->
         <div class="contact-form">
-            <div style="text-align: center; padding: 40px 20px;">
-                <h3 style="margin-bottom: 20px;">给我们留言</h3>
-                <p style="margin-bottom: 30px; color: #666;">点击下面的按钮向我们发送电子邮件。</p>
-                <a href="mailto:collections@jspcreditmanagement.co.uk" aria-label="发送电子邮件至 collections@jspcreditmanagement.co.uk" style="display: inline-block; padding: 12px 30px; background-color: #303b97; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">点击此处发送电子邮件</a>
-            </div>
+            <h3>给我们留言</h3>
+            <form id="contact-form" data-language="zh">
+                <fieldset disabled>
+                    <label for="contact-name">您的姓名</label>
+                    <input id="contact-name" name="name" autocomplete="name" maxlength="100" required>
+                    <label for="contact-email">您的电子邮件地址</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                    <label for="contact-subject">主题</label>
+                    <input id="contact-subject" name="subject" maxlength="150" required>
+                    <label for="contact-message">留言</label>
+                    <textarea id="contact-message" name="message" minlength="10" maxlength="5000" required></textarea>
+                    <div class="contact-trap" aria-hidden="true" inert>
+                        <label for="contact-website">请勿填写此项</label>
+                        <input id="contact-website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div id="contact-challenge"></div>
+                    <button type="submit" disabled>发送留言</button>
+                </fieldset>
+                <p id="contact-status" role="status" aria-live="polite">联系表格暂时无法使用，请稍后再试。</p>
+                <noscript><p>请启用 JavaScript 以使用此受保护的联系表格。</p></noscript>
+            </form>
         </div>
     </section>
-</body>
-</html>
 </footer>
 
 </body>
