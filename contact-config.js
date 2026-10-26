@@ -1,5 +1,4 @@
-// Public configuration only. Never put email addresses, API keys or secrets here.
 window.CONTACT_CONFIG = Object.freeze({
-    endpoint: "",
+    endpoint: "https://jsp-contact.joe-postings.workers.dev/contact",
     turnstileSiteKey: "0x4AAAAAAFmVdLL1Dq7f8P1C"
 });
